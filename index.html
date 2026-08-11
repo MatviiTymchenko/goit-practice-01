@@ -25,16 +25,16 @@
           >
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="" class="nav-link">Product</a>
+              <a href="#" class="nav-link current">Product</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">Pricing</a>
+              <a href="#" class="nav-link">Pricing</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">Customers</a>
+              <a href="#" class="nav-link">Customers</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link">Resources</a>
+              <a href="#" class="nav-link">Resources</a>
             </li>
           </ul>
         </nav>
@@ -42,18 +42,44 @@
           <button type="button" class="button-first">Sign In</button>
           <button type="button" class="button-second">Sign Up</button>
         </div>
-      </div>
+        <button class="mobile-burger-btn" type="button" data-menu-open>
+          <svg class="burger-icon" width="28" height="31">
+            <use href="./images/icons.svg#iconmenu-1"></use>
+          </svg>
+        </button>
+        </div>
+        <div class="mobile-menu" data-menu >
+        <div class="container mobile-menu-container">
+            <button class="mobile-close-button" data-menu-close><svg class="mobile-close-svg" width="8" height="8">
+              <use href="./images/icons.svg#close"></use>
+            </svg></button>
+            <nav class="mobile-menu-nav">
+<ul class="mobile-nav-list">
+  <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link current">Product</a></li>
+  <li class="mobile-nav-item"><a href="#" class="mobile-nav-link">Pricing</a></li>
+  <li class="mobile-nav-item"><a href="#" class="mobile-nav-link">Customers</a></li>
+  <li class="mobile-nav-item"><a href="#" class="mobile-nav-link">Resources</a></li>
+</ul>
+        </nav>
+         <div class="mobile-menu-buttons">
+          <button type="button" class="mobile-button-first">Sign In</button>
+          <button type="button" class="mobile-button-second">Sign Up</button>
+        </div>
+        </div>
+        </div>
     </header>
     <main>
       <!-- hero-section -->
       <section class="hero-section">
         <div class="container hero-container">
           <div class="hero-text-container">
+            <div class="hero-title-container">
             <h1 class="hero-title">Work at the speed of thought</h1>
             <p class="hero-text">
               Tools, tutorials, design and innovation experts, all in one place!
               The most intuitive way to imagine your next user experience.
             </p>
+            </div>
             <div class="hero-buttons">
               <button type="button" class="button-first-hero">
                 Get started
@@ -65,12 +91,13 @@
                 <span class="button-text">Watch the Video</span></a
               >
             </div>
-          </div>
+            </div>
           <img
             src="./images/hero-img-1.svg"
             alt="hero image"
             class="hero-image"
           />
+        </div>
         </div>
       </section>
       <!-- features-section -->
@@ -260,5 +287,6 @@
       <section></section>
       <section></section>
     </main>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
