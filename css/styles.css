@@ -4,6 +4,11 @@ body {
   background-color: #ffffff;
 }
 /* reset  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 ul,
 ol {
   list-style: none;
