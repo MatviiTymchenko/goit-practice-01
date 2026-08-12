@@ -199,6 +199,7 @@ img {
   width: 100%;
   height: 100%;
   gap: 80px;
+  padding: 0 10px;
 }
 .mobile-menu.is-open {
   opacity: 1;
