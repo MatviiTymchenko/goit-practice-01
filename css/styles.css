@@ -474,6 +474,8 @@ img {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.expert-button:hover,
+.expert-button:focus,
 .mobile-button-first:hover,
 .mobile-button-first:focus,
 .mobile-button-second:hover,
@@ -808,6 +810,7 @@ img {
   flex-direction: column;
   padding: 0 32px;
   gap: 40px;
+  align-items: center;
 }
 .expert-text-container {
   display: flex;
@@ -830,10 +833,41 @@ img {
 .expert-list {
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: 32px;
+  justify-items: center;
+  align-items: center;
 }
 .expert-items {
   display: flex;
   align-items: center;
+  gap: 14px;
+  max-width: 340px;
+}
+.expert-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 230px;
+  border-radius: 999px;
+  box-shadow: 2px 2px 10px 0 rgba(23, 58, 86, 0.25);
+}
+.expert-info {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #2f281e;
+  padding: 11px 17px;
+}
+.expert-button {
+  border-radius: 4px;
+  max-width: 216px;
+  height: auto;
+  background: #02897a;
+  padding: 15px 31px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 700px) {
@@ -841,39 +875,57 @@ img {
     padding-top: 75px;
   }
   .container.expert-container {
-    padding: 0 97px;
+    padding: 0;
+    gap: 0;
   }
   .expert-text-container {
     gap: 25px;
+    margin-bottom: 40px;
   }
   .expert-text {
     max-width: 542px;
   }
   .expert-list {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 32px;
-    column-gap: 91px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 100px;
+    row-gap: 25px;
+    margin-bottom: 50px;
+  }
+  .expert-items:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .expert-items:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .expert-items:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .expert-items:nth-child(4) {
+    grid-column: 2;
+    grid-row: 1;
   }
   .expert-items {
-    width: 100%;
-    max-width: 408px;
     gap: 10px;
+    max-width: 408px;
   }
   .expert-info-container {
-    width: 281px;
-    min-height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 999px;
-    box-shadow: 2px 2px 10px rgba(23, 58, 86, 0.25);
+    max-width: 281px;
+  }
+  .expert-info {
     padding: 13px 20px;
+    white-space: nowrap;
   }
   .expert-items-left {
-    justify-content: flex-start;
+    justify-self: start;
   }
+
   .expert-items-right {
-    justify-content: flex-end;
+    justify-self: end;
   }
-  .expert-image
+  .expert-image {
+    flex-shrink: 0;
+  }
 }
